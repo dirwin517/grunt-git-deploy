@@ -1,5 +1,5 @@
 {
-  "name": "grunt-git-deploy",
+  "name": "grunt-git-deploy2",
   "description": "Deploy files to any branch of any remote git repository.",
   "version": "0.3.0",
   "homepage": "https://github.com/iclanzan/grunt-git-deploy",
