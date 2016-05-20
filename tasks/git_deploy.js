@@ -110,8 +110,13 @@ module.exports = function(grunt) {
     }
 
     commands.push( git(['push', '--prune', '--force', '--quiet', '--follow-tags', options.url, options.branch]) );
-
-    grunt.util.async.series(commands, done);
+    
+    grunt.util.async.series(commands, function(err){
+      if( options.quietFail ){
+        return done();
+      }
+      done(err);
+    });
 
   });
 };
